@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鱗屋之中 — 陳怡彣 Sophia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-name">陳怡彣 Sophia</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">作品</a></li>
+      <li><a href="index.html#about">關於我</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Image -->
+<div class="project-hero">
+  <img src="assets/鱗屋之中/鱗屋cover.jpg" alt="實境解謎遊戲《鱗屋之中》">
+  <div class="project-hero-overlay">
+    <div class="project-hero-text">
+      <p class="hero-label">UX 研究・Prototype 迭代</p>
+      <h1>實境解謎遊戲《鱗屋之中》</h1>
+      <p>三階段觀察式測試，發現認知衝突，以線性入口包裹非線性玩法，評分穩定維持 4.8–4.9 顆星。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="project-content">
+  <a href="index.html" class="back-link">返回作品列表</a>
+
+  <!-- Meta -->
+  <div class="project-meta">
+    <div class="meta-item">
+      <span class="meta-label">公司</span>
+      <span class="meta-value">頂級創意行銷股份有限公司</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">時間</span>
+      <span class="meta-value">2021 – 2022</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">角色</span>
+      <span class="meta-value">UX 設計・測試主導</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">團隊規模</span>
+      <span class="meta-value">3 人</span>
+    </div>
+  </div>
+
+  <!-- 背景 -->
+  <div class="content-section">
+    <h2>背景</h2>
+    <p>《鱗屋之中》是頂級創意行銷的原創 IP 實境解謎遊戲，採用非線性設計——玩家可從多個切入點進入謎題、自由探索，而非按固定順序推進。我從設計初期就加入討論，並主導上市前的三階段使用者測試。</p>
+  </div>
+
+  <!-- 問題定義 -->
+  <div class="content-section">
+    <h2>問題定義</h2>
+    <p>非線性設計是這款遊戲的核心特色，但也是最大的認知風險：<strong>大多數玩家的心理模型是線性的</strong>，他們預期有明確的「下一步」提示。</p>
+    <p>如果玩家在進入遊戲的早期就感到困惑、不知道該做什麼，會直接流失興趣——而這個問題若不解決，非線性設計反而會成為體驗的阻礙。</p>
+  </div>
+
+  <!-- 研究過程 -->
+  <div class="content-section">
+    <h2>研究過程</h2>
+    <p>測試對象從「熟悉度高」到「最接近真實玩家」逐階遞進，每階段 12–18 人，共逾 40 人參與：</p>
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>階段</th>
+          <th>測試對象</th>
+          <th>目的</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>第一階段</td>
+          <td>內部員工</td>
+          <td>找出基本流程問題、機關與題目的可行性</td>
+        </tr>
+        <tr>
+          <td>第二階段</td>
+          <td>朋友</td>
+          <td>測試非完全了解設計意圖下的遊玩反應</td>
+        </tr>
+        <tr>
+          <td>第三階段</td>
+          <td>真實玩家</td>
+          <td>驗證接近上市狀態的實際體驗</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>觀察與歸納方式</h3>
+    <p>記錄玩家在哪些節點停頓、反覆確認、或出現明顯困惑行為，測試後進行訪談了解思考過程。以 <strong>Trello</strong> 歸納問題：</p>
+    <ul>
+      <li>以空間隔間（房間）為第一層分類</li>
+      <li>每個房間內依問題類型細分：機關・美術・題目・道具</li>
+      <li>每張卡片標注緊急程度與影響程度，統計排序後決定修改優先度</li>
+    </ul>
+  </div>
+
+  <!-- 關鍵決策 -->
+  <div class="content-section">
+    <h2>關鍵設計決策</h2>
+    <p>測試過程中曾討論是否將整個遊戲改為線性設計，以徹底消除認知衝突。最終決定<strong>保留非線性</strong>——這是這款原創 IP 的核心遊戲性，改掉會失去它存在的意義。</p>
+    <p>解法是：<strong>在遊戲進程上給玩家一條線性的入口，玩家在熟悉後自然進入非線性探索。</strong></p>
+    <ul>
+      <li>加入<strong>引導 NPC</strong>，在關鍵節點提供方向提示</li>
+      <li>設計<strong>階段提示機制</strong>，讓玩家知道目前在哪個階段、大方向是什麼</li>
+    </ul>
+    <p>玩家不再是「不知道該做什麼」，而是「知道大方向，但可以自由決定怎麼到達」。</p>
+  </div>
+
+  <!-- 成果圖 -->
+  <div class="image-block">
+    <img src="assets/鱗屋之中/鱗屋result.png" alt="逃脫吧評分截圖">
+    <p class="image-caption">逃脫吧平台評分</p>
+  </div>
+
+  <!-- 成果 -->
+  <div class="outcomes">
+    <h3>成果</h3>
+    <ul class="outcome-list">
+      <li>
+        <span class="outcome-num">4.8–4.9★</span>
+        <span>逃脫吧平台評分，2022 年上市至今穩定維持</span>
+      </li>
+      <li>
+        <span class="outcome-num">40+</span>
+        <span>三階段測試累計參與人數</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 專案導覽 -->
+  <div class="project-nav">
+    <div></div>
+    <a href="project-2.html" class="project-nav-item next">
+      <p class="nav-dir">下一個案例 →</p>
+      <p class="nav-title">G-EIGHT 遊戲展展場規劃</p>
+    </a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 陳怡彣 Sophia</p>
+</footer>
+
+</body>
+</html>
