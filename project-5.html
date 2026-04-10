@@ -20,102 +20,167 @@
 </nav>
 
 <!-- Hero Image -->
-<div class="project-hero">
+<div class="project-hero project-hero--image-only">
   <img src="assets/廣告Dashboard/gemini-demo1.png" alt="廣告成效數據分析 Dashboard">
-  <div class="project-hero-overlay">
-    <div class="project-hero-text">
-      <p class="hero-label">數據分析・AI 工具應用・指標定義</p>
-      <h1>廣告成效數據分析 Dashboard</h1>
-      <p>整合三方數據建構動態 Dashboard，特定平台成本降低 10%、ROAS 提升至 3–4。</p>
-    </div>
-  </div>
 </div>
 
 <!-- Content -->
 <div class="project-content">
-  <a href="index.html" class="back-link">返回作品列表</a>
 
-  <!-- Meta -->
-  <div class="project-meta">
-    <div class="meta-item">
-      <span class="meta-label">公司</span>
-      <span class="meta-value">頂級創意行銷股份有限公司</span>
+  <!-- 主體版面：TOC + 內容 -->
+  <div class="project-layout">
+
+    <!-- TOC 桌面側欄 -->
+    <aside class="toc">
+      <a href="index.html" class="toc-back">← 返回</a>
+      <p class="toc-title">章節</p>
+      <ul>
+        <li><a href="#section-bg">背景</a></li>
+        <li><a href="#section-problem">問題定義</a></li>
+        <li><a href="#section-process">執行過程</a></li>
+        <li><a href="#section-outcome">成果</a></li>
+      </ul>
+    </aside>
+
+    <!-- 主要內容 -->
+    <div class="project-main">
+
+      <!-- Intro -->
+      <div class="project-intro">
+        <div class="card-tags">
+          <span class="card-tag">數據分析</span>
+          <span class="card-tag">AI 工具應用</span>
+          <span class="card-tag">指標定義</span>
+        </div>
+        <h1 class="project-hero-title">廣告成效數據分析 Dashboard</h1>
+        <p class="project-hero-desc">整合三方數據建構動態 Dashboard，特定平台成本降低 10%、ROAS 提升至 3–4。</p>
+      </div>
+
+      <!-- Meta -->
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">公司</span>
+          <span class="meta-value">頂級創意行銷股份有限公司</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">時間</span>
+          <span class="meta-value">2025 – 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">角色</span>
+          <span class="meta-value">獨立執行・指標定義・資料架構・Dashboard 建構</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">工具</span>
+          <span class="meta-value">Gemini・Google Sheets</span>
+        </div>
+      </div>
+
+      <!-- 背景 -->
+      <div class="content-section" id="section-bg">
+        <h2>背景</h2>
+        <p>頂級創意行銷跨平台投放廣告，但在此之前公司沒有明確的數據依據，廣告投放決策依賴直覺判斷。數據分散於不同系統，難以交叉比對，導致廣告難以持續優化。</p>
+      </div>
+
+      <!-- 問題定義 -->
+      <div class="content-section" id="section-problem">
+        <h2>問題定義</h2>
+        <p>廣告優化的核心障礙是<strong>數據斷層</strong>：</p>
+        <div class="design-cards">
+          <div class="design-card">
+            <div class="design-card-icon">📊</div>
+            <h4>數據分散三方</h4>
+            <p>廣告投放、預約行為、每月費用分屬不同系統，無法交叉比對。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">🔍</div>
+            <h4>缺乏整合視角</h4>
+            <p>無法判斷哪個平台、哪個時段真正帶來預約轉換。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">🎯</div>
+            <h4>決策缺乏依據</h4>
+            <p>優化方向不明確，廣告投放仍依賴直覺判斷。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 執行過程 -->
+      <div class="content-section" id="section-process">
+        <h2>執行過程</h2>
+
+        <div class="validation-flow">
+          <div class="validation-step">
+            <div class="validation-tag">Step 1</div>
+            <h4>指標定義</h4>
+            <p>定義三個核心追蹤維度：跨月投放效益、預約轉換率、每月費用成效比</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">Step 2</div>
+            <h4>資料架構整合</h4>
+            <p>整合三方數據來源，建立統一結構，讓不同平台數字可以交叉比對</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">Step 3</div>
+            <h4>Dashboard 建構</h4>
+            <p>以 Gemini 協助撰寫計算公式、生成視覺化，支援跨時間段、跨平台數據對比</p>
+          </div>
+        </div>
+
+        <!-- Dashboard 截圖 -->
+        <div class="demo-grid" style="margin-top: 24px;">
+          <button class="thumb-link" onclick="document.getElementById('lb-demo1').showModal()">
+            <img src="assets/廣告Dashboard/gemini-demo1.png" alt="Dashboard 結構示意">
+            <span class="thumb-hint">點擊放大</span>
+          </button>
+          <button class="thumb-link" onclick="document.getElementById('lb-demo2').showModal()">
+            <img src="assets/廣告Dashboard/gemini-demo2.png" alt="各平台 ROAS 對比">
+            <span class="thumb-hint">點擊放大</span>
+          </button>
+        </div>
+        <p class="image-caption" style="padding: 10px 0 0 4px; background: none;">Dashboard 示意（以模擬數據呈現）</p>
+      </div>
+
+      <!-- 成果 -->
+      <div id="section-outcome">
+        <div class="outcomes">
+          <h3>成果（2026 Q1 驗證）</h3>
+          <ul class="outcome-list">
+            <li>
+              <span class="outcome-num">-10%</span>
+              <span>特定平台廣告成本降低</span>
+            </li>
+            <li>
+              <span class="outcome-num">3–4</span>
+              <span>ROAS 提升至</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- end project-main -->
+  </div><!-- end project-layout -->
+
+  <!-- 手機版浮動目錄 -->
+  <details class="toc-mobile">
+    <summary>章節 ☰</summary>
+    <div class="toc-mobile-list">
+      <a href="#section-bg">背景</a>
+      <a href="#section-problem">問題定義</a>
+      <a href="#section-process">執行過程</a>
+      <a href="#section-outcome">成果</a>
     </div>
-    <div class="meta-item">
-      <span class="meta-label">時間</span>
-      <span class="meta-value">2025 – 2026</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">角色</span>
-      <span class="meta-value">獨立執行・指標定義・資料架構・Dashboard 建構</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">工具</span>
-      <span class="meta-value">Gemini・Google Sheets</span>
-    </div>
-  </div>
+  </details>
 
-  <!-- 背景 -->
-  <div class="content-section">
-    <h2>背景</h2>
-    <p>頂級創意行銷跨平台投放廣告，但在此之前公司沒有明確的數據依據，廣告投放決策依賴直覺判斷。數據分散於不同系統，難以交叉比對，導致廣告難以持續優化。</p>
-  </div>
-
-  <!-- 問題定義 -->
-  <div class="content-section">
-    <h2>問題定義</h2>
-    <p>廣告優化的核心障礙是<strong>數據斷層</strong>：</p>
-    <ul>
-      <li>廣告投放數據（Google Ads）、預約行為數據（預約系統）、每月廣告費用分屬不同來源</li>
-      <li>沒有整合視角，無法判斷哪個平台、哪個時段真正帶來預約轉換</li>
-      <li>決策缺乏數據支撐，優化方向不明確</li>
-    </ul>
-  </div>
-
-  <!-- 執行過程 -->
-  <div class="content-section">
-    <h2>執行過程</h2>
-
-    <h3>指標定義</h3>
-    <p>獨立定義三個核心追蹤維度：</p>
-    <ul>
-      <li>跨月廣告投放效益（Google Ads 數據）</li>
-      <li>預約行為轉換率（預約系統數據）</li>
-      <li>每月廣告費用與成效比對</li>
-    </ul>
-
-    <h3>資料架構整合</h3>
-    <p>整合三方數據來源，建立統一的資料結構，讓不同平台的數字可以互相對應比較，解決原本數據各自獨立、無法交叉分析的問題。</p>
-
-    <h3>Dashboard 建構</h3>
-    <p>以 Gemini 協助撰寫計算公式、生成數據視覺化，建構動態 Dashboard，支援跨時間段、跨平台的數據對比，讓廣告決策有具體數字依據。</p>
-  </div>
-
-  <!-- Dashboard 截圖 -->
-  <div class="image-block">
-    <img src="assets/廣告Dashboard/gemini-demo1.png" alt="Dashboard 示意圖">
-    <p class="image-caption">Dashboard 結構示意（以模擬數據呈現）</p>
-  </div>
-
-  <div class="image-block">
-    <img src="assets/廣告Dashboard/gemini-demo2.png" alt="Dashboard 數據視覺化">
-    <p class="image-caption">各平台 ROAS 前後對比</p>
-  </div>
-
-  <!-- 成果 -->
-  <div class="outcomes">
-    <h3>成果（2026 Q1 驗證）</h3>
-    <ul class="outcome-list">
-      <li>
-        <span class="outcome-num">-10%</span>
-        <span>特定平台廣告成本降低</span>
-      </li>
-      <li>
-        <span class="outcome-num">3–4</span>
-        <span>ROAS 提升至</span>
-      </li>
-    </ul>
-  </div>
+  <!-- Dialog Lightboxes -->
+  <dialog id="lb-demo1" class="lightbox" onclick="this.close()">
+    <img src="assets/廣告Dashboard/gemini-demo1.png" alt="Dashboard 結構示意">
+  </dialog>
+  <dialog id="lb-demo2" class="lightbox" onclick="this.close()">
+    <img src="assets/廣告Dashboard/gemini-demo2.png" alt="各平台 ROAS 對比">
+  </dialog>
 
   <!-- 專案導覽 -->
   <div class="project-nav">
