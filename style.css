@@ -938,6 +938,8 @@ footer p {
   border-radius: 10px;
   overflow: hidden;
   background: var(--accent-bg);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .thumb-link img {
@@ -1292,6 +1294,11 @@ dialog.lightbox img {
   .toc-mobile { display: block; }
   .project-layout { display: block; }
   .project-content { max-width: 100%; }
+  .decision-compare { grid-template-columns: 1fr; }
+  .content-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .project-hero--image-only { height: 240px; }
+  .project-content { padding: 32px 20px 60px; }
+  .project-meta { gap: 20px; }
 }
 
 @media (max-width: 640px) {
@@ -1300,6 +1307,6 @@ dialog.lightbox img {
   .project-card:first-child { grid-column: auto; }
   .about .container { grid-template-columns: 1fr; }
   .project-nav { grid-template-columns: 1fr; }
-  .project-hero-text { padding: 24px; }
-  .project-hero-text h1 { font-size: 26px; }
+  .project-hero-title { font-size: 20px; }
+  .project-hero-desc { font-size: 14px; }
 }
