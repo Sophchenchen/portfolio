@@ -973,6 +973,15 @@ dialog.lightbox {
   max-width: 75vw;
   max-height: 85vh;
   overflow: hidden;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  dialog.lightbox {
+    max-width: 95vw;
+    max-height: 90vh;
+  }
 }
 
 dialog.lightbox::backdrop {
