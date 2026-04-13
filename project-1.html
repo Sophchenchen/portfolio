@@ -122,47 +122,25 @@
         </div>
 
         <h3>觀察與歸納方式</h3>
-        <p>記錄玩家在哪些節點停頓、反覆確認、或出現明顯困惑行為，測試後進行訪談了解思考過程，再以 Trello 建立三層歸納結構：</p>
+        <p>記錄玩家在哪些節點停頓、反覆確認、或出現明顯困惑行為，測試後進行訪談了解思考過程，再以 Trello 歸納問題：</p>
 
-        <div class="trello-structure">
-          <!-- 第一層：觀察 -->
-          <div class="trello-row">
-            <div class="trello-node trello-observe">
-              <p class="trello-node-label">現場觀察</p>
-              <p>節點停頓・反覆確認・困惑行為 → 測試後訪談思考過程</p>
-            </div>
+        <div class="validation-flow">
+          <div class="validation-step">
+            <div class="validation-tag">現場觀察</div>
+            <h4>行為記錄</h4>
+            <p>節點停頓・反覆確認・困惑行為，測試後訪談思考過程</p>
           </div>
-          <div class="trello-connector">↓ 以 Trello 歸納</div>
-
-          <!-- 第二層：房間 -->
-          <div class="trello-row">
-            <div class="trello-node trello-room">
-              <p class="trello-node-label">第一層：空間（房間）</p>
-              <p>以遊戲場景隔間為單位，每個房間獨立一欄</p>
-            </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">Trello 分類</div>
+            <h4>問題建卡</h4>
+            <p>以房間為第一層，每張卡片細分類型：機關・美術・題目・道具</p>
           </div>
-          <div class="trello-connector">↓</div>
-
-          <!-- 第三層：問題類型 -->
-          <div class="trello-row trello-types">
-            <div class="trello-type">機關</div>
-            <div class="trello-type">美術</div>
-            <div class="trello-type">題目</div>
-            <div class="trello-type">道具</div>
-          </div>
-          <div class="trello-connector">↓</div>
-
-          <!-- 第四層：優先度 -->
-          <div class="trello-row">
-            <div class="trello-node trello-priority">
-              <p class="trello-node-label">每張卡片標注</p>
-              <div class="trello-priority-tags">
-                <span>緊急程度</span>
-                <span class="trello-times">×</span>
-                <span>影響程度</span>
-                <span class="trello-arrow-right">→ 統計排序，決定修改優先度</span>
-              </div>
-            </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">優先排序</div>
+            <h4>修改決策</h4>
+            <p>每張卡片標注緊急程度 × 影響程度，統計排序決定修改優先度</p>
           </div>
         </div>
       </div>

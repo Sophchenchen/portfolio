@@ -128,32 +128,25 @@
         <h3>跨城市數據預測模型</h3>
         <p>以台北與台中的歷史售票數據為基礎，建立三種情境模型：</p>
 
-        <table class="content-table">
-          <thead>
-            <tr>
-              <th>情境</th>
-              <th>說明</th>
-              <th>對應策略</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>悲觀</td>
-              <td>售票率低於去年同期</td>
-              <td>縮減備案資源、加強現場促銷</td>
-            </tr>
-            <tr>
-              <td>持平</td>
-              <td>與去年同期相近</td>
-              <td>維持標準配置</td>
-            </tr>
-            <tr>
-              <td>樂觀</td>
-              <td>售票率高於去年同期</td>
-              <td>擴充人力、備援場次</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="validation-flow">
+          <div class="validation-step">
+            <div class="validation-tag">悲觀</div>
+            <h4>售票率低於去年同期</h4>
+            <p>縮減備案資源・加強現場促銷</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">持平</div>
+            <h4>與去年同期相近</h4>
+            <p>維持標準配置</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">樂觀</div>
+            <h4>售票率高於去年同期</h4>
+            <p>擴充人力・備援場次</p>
+          </div>
+        </div>
 
         <h3>工作人員素質</h3>
         <div class="validation-flow">

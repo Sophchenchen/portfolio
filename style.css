@@ -1110,10 +1110,11 @@ dialog.lightbox img {
 }
 
 .validation-arrow {
-  font-size: 18px;
-  color: var(--accent-lt);
-  padding-top: 48px;
+  font-size: 22px;
+  color: var(--accent);
+  padding-top: 44px;
   flex-shrink: 0;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -1148,12 +1149,14 @@ dialog.lightbox img {
 
 .decision-reject {
   background: #faf8f5;
-  opacity: 0.6;
+  border-left: 4px solid var(--muted-lt);
+  opacity: 0.65;
 }
 
 .decision-adopt {
   background: var(--accent-bg);
-  border-color: var(--accent-lt);
+  border-color: var(--rule);
+  border-left: 4px solid var(--accent);
 }
 
 .decision-label {
