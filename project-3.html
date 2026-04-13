@@ -21,7 +21,7 @@
 
 <!-- Hero Image -->
 <div class="project-hero project-hero--image-only">
-  <img src="assets/名偵探柯南/柯南cover.jpg" alt="名偵探柯南 IP 實境活動">
+  <img src="assets/名偵探柯南/柯南cover.jpg" alt="名偵探柯南 IP 實境活動" fetchpriority="high">
 </div>
 
 <!-- Content -->
@@ -38,6 +38,7 @@
         <li><a href="#section-bg">背景</a></li>
         <li><a href="#section-problem">問題定義</a></li>
         <li><a href="#section-decision">服務藍圖與設計決策</a></li>
+        <li><a href="#section-return">退貨 User Flow</a></li>
         <li><a href="#section-outcome">成果</a></li>
       </ul>
     </aside>
@@ -168,6 +169,63 @@
         <p style="margin-top: 16px;">票價門檻較高，工作人員的情緒價值是影響滿意度的關鍵變數。</p>
       </div>
 
+      <!-- 退貨 User Flow -->
+      <div class="content-section" id="section-return">
+        <h2>周邊商品退貨 User Flow 設計</h2>
+        <p>活動周邊商品透過第三方電商平台販售。若與物流廠商（全家、7-11）簽約合作，每月須支付棧板費、出貨及退貨處理費用，對日方與我方而言都是不必要的成本支出。</p>
+        <p>由於公司有足夠的倉儲空間與人手，我們決定<strong>將商品販售平台與退貨處理拆分</strong>——前台維持線上購物流程不變，退貨需求由內部自行受理，不透過物流商代管。</p>
+
+        <h3>退貨流程設計重點</h3>
+        <div class="design-cards">
+          <div class="design-card">
+            <div class="design-card-icon">📩</div>
+            <h4>統一入口</h4>
+            <p>退貨申請一律透過粉絲專頁私訊，避免管道分散造成漏單。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">📝</div>
+            <h4>退貨單機制</h4>
+            <p>要求買方填寫退貨單作為啟動退款的必要條件，降低人工核對成本。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">📦</div>
+            <h4>寄件標準化</h4>
+            <p>統一採全家店到店寄件，集中至單一指定門市，減少取件分散問題。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">💳</div>
+            <h4>付款方式對應退款路徑</h4>
+            <p>線上刷卡走原卡刷退；超商代碼付款填退款帳戶，明確區分兩條路徑。</p>
+          </div>
+        </div>
+
+        <div class="validation-flow" style="margin-top: 24px;">
+          <div class="validation-step">
+            <div class="validation-tag">Step 1</div>
+            <h4>提出申請</h4>
+            <p>私訊粉絲專頁 → 客服提供退貨單</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">Step 2</div>
+            <h4>買方寄件</h4>
+            <p>填寫退貨單 → 全家店到店寄至指定門市</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">Step 3</div>
+            <h4>賣家退款</h4>
+            <p>收件確認 → 10 工作天內完成退款或刷退</p>
+          </div>
+        </div>
+
+        <button class="thumb-link" style="margin-top: 24px; border: none; width: 100%; text-align: left;" onclick="document.getElementById('lb-userflow').showModal()">
+          <img src="assets/名偵探柯南/user-flow-return.jpg" alt="退貨申請 User Flow" loading="lazy">
+          <span class="thumb-hint">點擊放大</span>
+        </button>
+        <p class="image-caption" style="padding: 10px 0 0 4px; background: none;">退貨申請 User Flow</p>
+      </div>
+
       <!-- 成果 -->
       <div id="section-outcome">
         <div class="outcomes">
@@ -209,13 +267,17 @@
       <a href="#section-bg">背景</a>
       <a href="#section-problem">問題定義</a>
       <a href="#section-decision">服務藍圖與設計決策</a>
+      <a href="#section-return">退貨 User Flow</a>
       <a href="#section-outcome">成果</a>
     </div>
   </details>
 
-  <!-- Dialog Lightbox -->
+  <!-- Dialog Lightboxes -->
   <dialog id="lb-result" class="lightbox" onclick="this.close()">
     <img src="assets/名偵探柯南/柯南result.jpg" alt="活動現場">
+  </dialog>
+  <dialog id="lb-userflow" class="lightbox" onclick="this.close()">
+    <img src="assets/名偵探柯南/user-flow-return.jpg" alt="退貨申請 User Flow">
   </dialog>
 
   <!-- 專案導覽 -->
