@@ -69,7 +69,7 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">角色</span>
-          <span class="meta-value">UX 設計・測試主導</span>
+          <span class="meta-value">主導三階段使用者測試・提出線性入口解決方案</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">團隊規模</span>
@@ -94,24 +94,29 @@
         <h2>問題定義</h2>
         <p>非線性設計是這款遊戲的核心特色，但也是最大的認知風險：<strong>大多數玩家的心理模型是線性的</strong>，他們預期有明確的「下一步」提示。</p>
         <p>如果玩家在進入遊戲的早期就感到困惑、不知道該做什麼，會直接流失興趣——而這個問題若不解決，非線性設計反而會成為體驗的阻礙。</p>
+
+        <div class="insight-pull">
+          <p class="insight-label">核心洞察</p>
+          <p>玩家不是不想探索，而是需要一個起點。沒有方向感，自由就會變成焦慮。</p>
+        </div>
       </div>
 
       <!-- 研究過程 -->
       <div class="content-section" id="section-research">
         <h2>研究過程</h2>
-        <p>測試對象從「熟悉度高」到「最接近真實玩家」逐階遞進，每階段 12–18 人，共逾 40 人參與：</p>
+        <p>三個階段、逾 40 人，測試對象從熟悉設計意圖到接近真實玩家逐步遞進：</p>
 
         <div class="validation-flow">
           <div class="validation-step">
             <div class="validation-tag">第一階段</div>
             <h4>內部員工</h4>
-            <p>找出基本流程問題、機關與題目的可行性</p>
+            <p>驗證機關、題目基本可行性</p>
           </div>
           <div class="validation-arrow">→</div>
           <div class="validation-step">
             <div class="validation-tag">第二階段</div>
             <h4>朋友</h4>
-            <p>測試非完全了解設計意圖下的遊玩反應</p>
+            <p>測試不熟悉設計意圖時的遊玩反應</p>
           </div>
           <div class="validation-arrow">→</div>
           <div class="validation-step">
@@ -121,26 +126,57 @@
           </div>
         </div>
 
-        <h3>觀察與歸納方式</h3>
-        <p>記錄玩家在哪些節點停頓、反覆確認、或出現明顯困惑行為，測試後進行訪談了解思考過程，再以 Trello 歸納問題：</p>
+        <h3>觀察歸納方式</h3>
+        <p>現場記錄停頓節點與困惑行為，測試後訪談歸因，以 Trello 按房間建卡、標注類型與優先度：</p>
 
-        <div class="validation-flow">
-          <div class="validation-step">
-            <div class="validation-tag">現場觀察</div>
-            <h4>行為記錄</h4>
-            <p>節點停頓・反覆確認・困惑行為，測試後訪談思考過程</p>
+        <!-- Trello 看板結構 -->
+        <div class="trello-board-demo">
+          <div class="trello-columns">
+            <div class="trello-col-header">R1</div>
+            <div class="trello-col-header">R2</div>
+            <div class="trello-col-header">R3</div>
           </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">Trello 分類</div>
-            <h4>問題建卡</h4>
-            <p>以房間為第一層，每張卡片細分類型：機關・美術・題目・道具</p>
+          <p class="image-caption" style="padding: 0 0 10px 2px; background: none;">卡片結構範例</p>
+          <div class="trello-card-example">
+            <div class="trello-card-header">
+              <span class="trello-type-tag">機關</span>
+              <span class="priority-dot red"></span>
+              <span class="scope-badge global">全局</span>
+            </div>
+            <div class="trello-card-title">走廊機關觸發邏輯不清楚，多組玩家跳過未觸發</div>
           </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">優先排序</div>
-            <h4>修改決策</h4>
-            <p>每張卡片標注緊急程度 × 影響程度，統計排序決定修改優先度</p>
+          <div class="trello-legend">
+            <div class="legend-item"><span class="priority-dot red"></span><span>立即處理</span></div>
+            <div class="legend-item"><span class="priority-dot yellow"></span><span>次要</span></div>
+            <div class="legend-item"><span class="priority-dot blue"></span><span>待觀察</span></div>
+            <div class="legend-item"><span class="priority-dot green"></span><span>已完成</span></div>
+            <div class="legend-item"><span class="scope-badge global">全局</span><span>影響整場</span></div>
+            <div class="legend-item"><span class="scope-badge local">單間</span><span>僅限單一房間</span></div>
+          </div>
+        </div>
+
+        <!-- 介入率對比 -->
+        <h3>歸納結果</h3>
+        <p>卡關行為高度集中在遊戲開場——玩家缺乏起點，而非謎題太難：</p>
+        <div class="stat-compare">
+          <div class="stat-compare-side">
+            <p class="stat-compare-label">設計調整前</p>
+            <div class="stat-row">
+              <span class="stat-frac">5/6</span>
+              <span>不知道下一步要去哪個空間</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-frac">5/6</span>
+              <span>不確定任務是否已完成</span>
+            </div>
+          </div>
+          <div class="stat-compare-arrow">→</div>
+          <div class="stat-compare-side after">
+            <p class="stat-compare-label">設計調整後</p>
+            <div class="stat-row">
+              <span class="stat-frac">1/6</span>
+              <span>需要工作人員介入</span>
+            </div>
           </div>
         </div>
       </div>
@@ -148,7 +184,7 @@
       <!-- 關鍵設計決策 -->
       <div class="content-section" id="section-decision">
         <h2>關鍵設計決策</h2>
-        <p>測試過程中曾討論是否將整個遊戲改為線性設計，以徹底消除認知衝突。兩個方向的取捨如下：</p>
+        <p>歸納數據後，我在團隊討論中提出是否將整個遊戲改為線性設計，以徹底消除認知衝突。兩個方向的取捨如下：</p>
 
         <div class="decision-compare">
           <div class="decision-option decision-reject">
@@ -180,6 +216,18 @@
 
       <!-- 成果 -->
       <div id="section-outcome">
+        <div class="design-cards" style="margin-bottom: 20px;">
+          <div class="design-card">
+            <div class="design-card-icon">🧭</div>
+            <h4>引導 NPC</h4>
+            <p>開場觸發首次對話，明確告知玩家起點方向。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">📍</div>
+            <h4>第一謎題進入點標示</h4>
+            <p>設置明確的視覺入口，讓玩家不需詢問即可開始。</p>
+          </div>
+        </div>
         <div class="outcomes">
           <h3>成果</h3>
           <ul class="outcome-list">
@@ -195,6 +243,7 @@
         </div>
 
         <!-- 評分截圖 -->
+
         <button class="thumb-link" style="margin-top: 20px; border: none; width: 100%; text-align: left;" onclick="document.getElementById('lb-result').showModal()">
           <img src="assets/鱗屋之中/鱗屋result.png" alt="逃脫吧平台評分截圖">
           <span class="thumb-hint">點擊放大</span>
@@ -242,5 +291,6 @@
   <p>© 2026 陳怡彣 Sophia</p>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>

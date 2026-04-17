@@ -37,8 +37,8 @@
       <ul>
         <li><a href="#section-bg">背景</a></li>
         <li><a href="#section-problem">問題定義</a></li>
-        <li><a href="#section-decision">服務藍圖與設計決策</a></li>
-        <li><a href="#section-return">退貨 User Flow</a></li>
+        <li><a href="#section-blueprint">服務藍圖</a></li>
+        <li><a href="#section-model">跨城市預測模型</a></li>
         <li><a href="#section-outcome">成果</a></li>
       </ul>
     </aside>
@@ -88,64 +88,80 @@
       <!-- 問題定義 -->
       <div class="content-section" id="section-problem">
         <h2>問題定義</h2>
-        <p>這類沉浸式實境活動在台灣尚未普及，票價偏高，玩家對體驗值的期待更高。大規模執行面臨兩個核心挑戰：</p>
+        <p>如何讓 100 人同時在場，不同座位、不同時間點，都獲得完整且不被打斷的沉浸體驗？</p>
+
+        <div class="insight-pull">
+          <p class="insight-label">執行核心挑戰</p>
+          <p>票價是一般密室逃脫的 2–3 倍，任何執行破綻——動線混亂、演出看不見、跨城市品質不一——都會直接打斷沉浸感，影響玩家對「值不值得」的評估。</p>
+        </div>
 
         <div class="design-cards">
           <div class="design-card">
             <div class="design-card-icon">🚶</div>
             <h4>動線衝突與暴雷風險</h4>
-            <p>玩家在不同時間點進出小房間取得線索。動線設計不當會造成排隊擁擠，房間位置過近則可能讓外部玩家聽到線索而提早暴雷。</p>
+            <p>進出時機若不控制，易造成排隊擁擠或讓外部玩家提早聽到線索。</p>
           </div>
           <div class="design-card">
             <div class="design-card-icon">👁</div>
-            <h4>視覺死角</h4>
-            <p>玩家分散坐在不同位置觀看演員表演，需確保每個座位都能完整看到關鍵演出，沒有被遮擋的死角。</p>
+            <h4>演出可視性</h4>
+            <p>關鍵演出需讓所有座位都能完整看見，不留死角。</p>
+          </div>
+          <div class="design-card">
+            <div class="design-card-icon">🗺</div>
+            <h4>跨城市執行一致性</h4>
+            <p>不同城市場地與受眾條件各異，需在日方標準內因地制宜調整執行規模。</p>
           </div>
         </div>
       </div>
 
-      <!-- 設計決策 -->
-      <div class="content-section" id="section-decision">
-        <h2>服務藍圖與設計決策</h2>
-        <p>以手繪方式建立服務藍圖，規範不同時間序下的執行細節，讓多場次、不同場地有統一參照標準。</p>
-        <div class="validation-flow">
-          <div class="validation-step">
-            <div class="validation-tag">玩家動線</div>
-            <p>規範不同時間點的進出路徑，避免排隊擁擠與暴雷風險</p>
-          </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">工作人員站位</div>
-            <p>明確定義各節點站位，確保場域各區有人引導</p>
-          </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">演員走位</div>
-            <p>與演出時間序對應，確保所有座位可看到關鍵演出</p>
-          </div>
-        </div>
+      <!-- 服務藍圖 -->
+      <div class="content-section" id="section-blueprint">
+        <h2>服務藍圖</h2>
+        <p>以手繪服務藍圖規範三個執行層的時間序，確保百人場域在不同城市、多場次下有統一標準：</p>
 
-        <h3>跨城市數據預測模型</h3>
-        <p>以台北與台中的歷史售票數據為基礎，建立三種情境模型：</p>
-
-        <div class="validation-flow">
-          <div class="validation-step">
-            <div class="validation-tag">悲觀</div>
-            <h4>售票率低於去年同期</h4>
-            <p>縮減備案資源・加強現場促銷</p>
-          </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">持平</div>
-            <h4>與去年同期相近</h4>
-            <p>維持標準配置</p>
-          </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">樂觀</div>
-            <h4>售票率高於去年同期</h4>
-            <p>擴充人力・備援場次</p>
-          </div>
+        <div class="service-blueprint-wrap">
+          <table class="service-blueprint">
+            <thead>
+              <tr>
+                <th></th>
+                <th>入場</th>
+                <th class="bp-phase-perf">開場演出</th>
+                <th>解謎循環 × 3–5
+                  <span class="bp-time-note">含 3 次演出召回（5 / 10 / 30 min）</span>
+                </th>
+                <th>離場</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bp-player">
+                <td class="bp-role">玩家</td>
+                <td>報到 → 入座</td>
+                <td class="bp-perf">觀看演出<br>接收第一條線索</td>
+                <td>進出小房間取線索
+                  <span class="bp-sub-note">★ 演出召回時：回座位觀看</span>
+                </td>
+                <td>購買周邊（選）<br>離場</td>
+              </tr>
+              <tr class="bp-divider"><td colspan="5">互動線</td></tr>
+              <tr class="bp-front">
+                <td class="bp-role">演員<br>裝飾人員</td>
+                <td>定位就緒<br>特定站位</td>
+                <td class="bp-perf">開場表演<br>裝飾人員台詞互動</td>
+                <td class="bp-perf">演出 × 3 次<br>裝飾人員輪流與演員互動</td>
+                <td>引導購物</td>
+              </tr>
+              <tr class="bp-divider"><td colspan="5">可見線</td></tr>
+              <tr class="bp-back">
+                <td class="bp-role">場控<br>小房間人員</td>
+                <td>確認人數<br>道具備齊</td>
+                <td class="bp-perf">監控座位<br>小房間就位</td>
+                <td>房間外：引導動線、防暴雷<br>房間內：給予線索
+                  <span class="bp-sub-note">★ 演出召回時：確保玩家全數回座</span>
+                </td>
+                <td>場次結算<br>道具回收</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <h3>工作人員素質</h3>
@@ -157,67 +173,68 @@
           <div class="validation-arrow">→</div>
           <div class="validation-step">
             <div class="validation-tag">制定 SOP</div>
-            <p>回台後建立面試標準與培訓教材，統一執行品質</p>
+            <p>建立面試標準與培訓教材，統一執行品質</p>
           </div>
         </div>
-        <p style="margin-top: 16px;">票價門檻較高，工作人員的情緒價值是影響滿意度的關鍵變數。</p>
+        <div class="insight-pull">
+          <p class="insight-label">關鍵變數</p>
+          <p>票價門檻是一般密室逃脫的 2–3 倍，工作人員的情緒價值直接影響玩家對「值不值得」的評估。</p>
+        </div>
       </div>
 
-      <!-- 退貨 User Flow -->
-      <div class="content-section" id="section-return">
-        <h2>周邊商品退貨 User Flow 設計</h2>
-        <p>活動周邊商品透過第三方電商平台販售。若與物流廠商（全家、7-11）簽約合作，每月須支付棧板費、出貨及退貨處理費用，對日方與我方而言都是不必要的成本支出。</p>
-        <p>由於公司有足夠的倉儲空間與人手，我們決定<strong>將商品販售平台與退貨處理拆分</strong>——前台維持線上購物流程不變，退貨需求由內部自行受理，不透過物流商代管。</p>
+      <!-- 跨城市預測模型 -->
+      <div class="content-section" id="section-model">
+        <h2>跨城市預測模型</h2>
 
-        <h3>退貨流程設計重點</h3>
-        <div class="design-cards">
-          <div class="design-card">
-            <div class="design-card-icon">📩</div>
-            <h4>統一入口</h4>
-            <p>退貨申請一律透過粉絲專頁私訊，避免管道分散造成漏單。</p>
-          </div>
-          <div class="design-card">
-            <div class="design-card-icon">📝</div>
-            <h4>退貨單機制</h4>
-            <p>要求買方填寫退貨單作為啟動退款的必要條件，降低人工核對成本。</p>
-          </div>
-          <div class="design-card">
-            <div class="design-card-icon">📦</div>
-            <h4>寄件標準化</h4>
-            <p>統一採全家店到店寄件，集中至單一指定門市，減少取件分散問題。</p>
-          </div>
-          <div class="design-card">
-            <div class="design-card-icon">💳</div>
-            <h4>付款方式對應退款路徑</h4>
-            <p>線上刷卡走原卡刷退；超商代碼付款填退款帳戶，明確區分兩條路徑。</p>
-          </div>
-        </div>
-
-        <div class="validation-flow" style="margin-top: 24px;">
+        <!-- 時間軸：選城市 → 首辦數據 → 建模 -->
+        <div class="validation-flow">
           <div class="validation-step">
-            <div class="validation-tag">Step 1</div>
-            <h4>提出申請</h4>
-            <p>私訊粉絲專頁 → 客服提供退貨單</p>
+            <div class="validation-tag">2025 選城市</div>
+            <h4>台中市場研究</h4>
+            <p>密室逃脫工作室密度與台北相近・曾舉辦柯南週年展與電影特典，粉絲基礎已建立</p>
           </div>
           <div class="validation-arrow">→</div>
           <div class="validation-step">
-            <div class="validation-tag">Step 2</div>
-            <h4>買方寄件</h4>
-            <p>填寫退貨單 → 全家店到店寄至指定門市</p>
+            <div class="validation-tag">2025 首辦</div>
+            <h4>執行 × 數據蒐集</h4>
+            <p>首辦台中場次，取得在地售票數據作為往後規劃基準</p>
           </div>
           <div class="validation-arrow">→</div>
           <div class="validation-step">
-            <div class="validation-tag">Step 3</div>
-            <h4>賣家退款</h4>
-            <p>收件確認 → 10 工作天內完成退款或刷退</p>
+            <div class="validation-tag">2026 規劃</div>
+            <h4>雙城情境模型</h4>
+            <p>以 2025 台北＋台中歷史數據為基準，依城市特性分別設定目標情境</p>
           </div>
         </div>
 
-        <button class="thumb-link" style="margin-top: 24px; border: none; width: 100%; text-align: left;" onclick="document.getElementById('lb-userflow').showModal()">
-          <img src="assets/名偵探柯南/user-flow-return.jpg" alt="退貨申請 User Flow" loading="lazy">
-          <span class="thumb-hint">點擊放大</span>
-        </button>
-        <p class="image-caption" style="padding: 10px 0 0 4px; background: none;">退貨申請 User Flow</p>
+        <!-- 監測與應對機制 -->
+        <h3>監測與應對機制</h3>
+        <p>各城市依自己的歷史售票數據設定目標售票率（台中以 2025 首辦數據為基準），售票期間持續觀察實際售出率，對照目標採取應對行動：</p>
+
+        <div class="validation-flow">
+          <div class="validation-step">
+            <div class="validation-tag">偏低</div>
+            <h4>低於目標售票率</h4>
+            <p>增加廣告預算推廣</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">符合</div>
+            <h4>符合目標售票率</h4>
+            <p>維持標準配置</p>
+          </div>
+          <div class="validation-arrow">→</div>
+          <div class="validation-step">
+            <div class="validation-tag">偏高</div>
+            <h4>高於目標售票率</h4>
+            <p>討論是否增加備援場次</p>
+          </div>
+        </div>
+
+        <div class="insight-pull">
+          <p class="insight-label">對日報告策略</p>
+          <p>以「目標售票率」向日方說明執行方向——台北台中各依自己的歷史數據設定目標，過程中依實際售票進度調整廣告投放力道。</p>
+        </div>
       </div>
 
       <!-- 成果 -->
@@ -260,8 +277,8 @@
     <div class="toc-mobile-list">
       <a href="#section-bg">背景</a>
       <a href="#section-problem">問題定義</a>
-      <a href="#section-decision">服務藍圖與設計決策</a>
-      <a href="#section-return">退貨 User Flow</a>
+      <a href="#section-blueprint">服務藍圖</a>
+      <a href="#section-model">跨城市預測模型</a>
       <a href="#section-outcome">成果</a>
     </div>
   </details>
@@ -269,9 +286,6 @@
   <!-- Dialog Lightboxes -->
   <dialog id="lb-result" class="lightbox" onclick="this.close()">
     <img src="assets/名偵探柯南/柯南result.jpg" alt="活動現場">
-  </dialog>
-  <dialog id="lb-userflow" class="lightbox" onclick="this.close()">
-    <img src="assets/名偵探柯南/user-flow-return.jpg" alt="退貨申請 User Flow">
   </dialog>
 
   <!-- 專案導覽 -->
@@ -293,5 +307,6 @@
   <p>© 2026 陳怡彣 Sophia</p>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
