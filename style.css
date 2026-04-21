@@ -308,7 +308,61 @@ nav .container {
   transform: translateX(4px);
 }
 
-/* ── About（首頁底部） ───────────────────────────────────── */
+/* ── Intro（我是誰／怎麼工作） ──────────────────────────── */
+.intro {
+  padding: 72px 0 64px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro .section-label {
+  margin-bottom: 24px;
+}
+
+.intro-content {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-content p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.intro-motto {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  padding-top: 4px;
+}
+
+/* ── Closing（結論） ─────────────────────────────────────── */
+.closing {
+  background: var(--bg-dark);
+  color: #f5ede3;
+  padding: 80px 0;
+}
+
+.closing p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #c4a882;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.closing-tagline {
+  font-family: var(--font-heading);
+  font-size: 22px !important;
+  font-weight: 700;
+  line-height: 1.6 !important;
+  color: #fff !important;
+  margin-bottom: 0 !important;
+}
+
+/* ── About（保留，project 頁面未用到，可清除） ───────────── */
 .about {
   background: var(--bg-dark);
   color: #f5ede3;
@@ -371,11 +425,31 @@ nav .container {
 footer {
   background: var(--bg-dark);
   border-top: 1px solid #3d2e1e;
-  padding: 20px 0;
-  text-align: center;
+  padding: 24px 0;
 }
 
-footer p {
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.footer-contact li {
+  font-size: 12px;
+  color: #6b5040;
+  letter-spacing: 0.03em;
+}
+
+.footer-copy {
   font-size: 12px;
   color: #6b5040;
   letter-spacing: 0.05em;
@@ -1400,6 +1474,8 @@ dialog.lightbox img {
   .project-grid { grid-template-columns: 1fr; }
   .project-card:nth-child(5) { grid-column: auto; max-width: none; justify-self: auto; }
   .about .container { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-contact { flex-direction: column; gap: 4px; }
   .project-nav { grid-template-columns: 1fr; }
   .project-hero-title { font-size: 22px; }
   .project-hero-desc { font-size: 14px; }
