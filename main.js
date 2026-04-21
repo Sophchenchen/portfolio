@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Scroll Fade-in ───────────────────────────────────────
-  const fadeTargets = document.querySelectorAll('.content-section, #section-outcome');
+  const fadeTargets = document.querySelectorAll(
+    '.project-intro, .project-meta, .content-section, #section-outcome'
+  );
   const fadeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -37,5 +39,55 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('fade-in');
     fadeObserver.observe(el);
   });
+
+  // ── Index：Section Header fade-in ───────────────────────
+  document.querySelectorAll('.section-header').forEach(el => {
+    el.classList.add('fade-in');
+    fadeObserver.observe(el);
+  });
+
+  // ── Index：Project Cards stagger fade-in ─────────────────
+  const projectCards = document.querySelectorAll('.project-card');
+  if (projectCards.length) {
+    const cardObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    projectCards.forEach((card, i) => {
+      card.classList.add('fade-in');
+      card.style.transitionDelay = `${i * 0.08}s`;
+      cardObserver.observe(card);
+    });
+  }
+
+  // ── Hero Stats count-up ──────────────────────────────────
+  const statNums = document.querySelectorAll('.hero-stat-num');
+  if (statNums.length) {
+    const countObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        obs.unobserve(entry.target);
+        const el = entry.target;
+        const raw = el.textContent.trim();
+        const suffix = raw.replace(/[0-9]/g, '');
+        const target = parseInt(raw, 10);
+        const duration = 800;
+        const start = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 4);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.5 });
+    statNums.forEach(el => countObserver.observe(el));
+  }
 
 });
