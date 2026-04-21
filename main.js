@@ -65,6 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Mobile：卡片進入視窗自動顯示 overlay ─────────────────
+  if (window.matchMedia('(max-width: 640px)').matches) {
+    const mobileCards = document.querySelectorAll('.project-card');
+    if (mobileCards.length) {
+      const mobileOverlayObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('overlay-active', entry.isIntersecting);
+        });
+      }, { threshold: 0.45 });
+      mobileCards.forEach(card => mobileOverlayObserver.observe(card));
+    }
+  }
+
   // ── Hero Stats count-up ──────────────────────────────────
   const statNums = document.querySelectorAll('.hero-stat-num');
   if (statNums.length) {
