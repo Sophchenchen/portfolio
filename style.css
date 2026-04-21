@@ -165,13 +165,20 @@ nav .container {
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 24px;
 }
 
-/* 第一張卡片全寬 */
-.project-card:first-child {
-  grid-column: 1 / -1;
+.project-card {
+  grid-column: span 2;
+}
+
+.project-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.project-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .project-card {
@@ -189,15 +196,61 @@ nav .container {
 }
 
 .card-image {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 8;
   overflow: hidden;
   background: var(--accent-bg);
 }
 
-.project-card:first-child .card-image {
-  aspect-ratio: 16 / 7;
+/* ── Card Overlay ────────────────────────────────────────── */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 32, 20, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 28px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+.project-card:hover .card-overlay {
+  opacity: 1;
+}
+.card-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+.card-overlay li {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 13px;
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+  transform: translateY(6px);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.project-card:hover .card-overlay li {
+  opacity: 1;
+  transform: none;
+}
+.project-card:hover .card-overlay li:nth-child(1) { transition-delay: 0.05s; }
+.project-card:hover .card-overlay li:nth-child(2) { transition-delay: 0.12s; }
+.project-card:hover .card-overlay li:nth-child(3) { transition-delay: 0.19s; }
+.card-overlay li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-lt);
+}
+
 
 .card-body {
   padding: 24px 28px 28px;
@@ -228,9 +281,6 @@ nav .container {
   line-height: 1.4;
 }
 
-.project-card:first-child .card-body h3 {
-  font-size: 22px;
-}
 
 .card-body p {
   font-size: 13px;
@@ -1348,7 +1398,9 @@ dialog.lightbox img {
 @media (max-width: 640px) {
   .hero h1 { font-size: 32px; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-card:first-child { grid-column: auto; }
+  .project-card,
+  .project-card:nth-child(4),
+  .project-card:nth-child(5) { grid-column: auto; }
   .about .container { grid-template-columns: 1fr; }
   .project-nav { grid-template-columns: 1fr; }
   .project-hero-title { font-size: 22px; }
