@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
           entry.target.classList.toggle('overlay-active', entry.isIntersecting);
         });
-      }, { threshold: 0.45 });
+      }, { threshold: 0.15, rootMargin: '0px 0px 80px 0px' });
       mobileCards.forEach(card => mobileOverlayObserver.observe(card));
     }
   }
