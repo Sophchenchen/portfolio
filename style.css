@@ -51,6 +51,12 @@ img {
   padding: 0 32px;
 }
 
+.container--wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 /* ── Nav ─────────────────────────────────────────────────── */
 nav {
   position: sticky;
@@ -165,20 +171,14 @@ nav .container {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 24px;
-}
-
-.project-card {
-  grid-column: span 2;
-}
-
-.project-card:nth-child(4) {
-  grid-column: 2 / span 2;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
 }
 
 .project-card:nth-child(5) {
-  grid-column: 4 / span 2;
+  grid-column: 1 / -1;
+  max-width: calc(50% - 14px);
+  justify-self: center;
 }
 
 .project-card {
@@ -1398,9 +1398,7 @@ dialog.lightbox img {
 @media (max-width: 640px) {
   .hero h1 { font-size: 32px; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-card,
-  .project-card:nth-child(4),
-  .project-card:nth-child(5) { grid-column: auto; }
+  .project-card:nth-child(5) { grid-column: auto; max-width: none; justify-self: auto; }
   .about .container { grid-template-columns: 1fr; }
   .project-nav { grid-template-columns: 1fr; }
   .project-hero-title { font-size: 22px; }
@@ -1557,7 +1555,7 @@ dialog.lightbox img {
   color: var(--muted-lt);
   letter-spacing: 0.08em;
   margin-top: 28px;
-  animation: hint-bob 2s ease-in-out infinite;
+  opacity: 0.6;
 }
 .hero-scroll-hint::before {
   content: "";
@@ -1565,16 +1563,6 @@ dialog.lightbox img {
   width: 1px;
   height: 24px;
   background: var(--accent-lt);
-  transform-origin: top;
-  animation: hint-grow 2s ease-in-out infinite;
-}
-@keyframes hint-bob {
-  0%, 100% { opacity: 0.5; transform: translateY(0); }
-  50%       { opacity: 1;   transform: translateY(4px); }
-}
-@keyframes hint-grow {
-  0%, 100% { transform: scaleY(0.6); }
-  50%       { transform: scaleY(1); }
 }
 
 /* ── Before / After 統計對比 ─────────────────────────────── */
