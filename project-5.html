@@ -32,7 +32,6 @@
 <!-- Content -->
 <div class="project-content">
 
-  <!-- 主體版面：TOC + 內容 -->
   <div class="project-layout">
 
     <!-- TOC 桌面側欄 -->
@@ -42,8 +41,8 @@
       <ul>
         <li><a href="#section-bg">背景</a></li>
         <li><a href="#section-users">使用者與痛點</a></li>
-        <li><a href="#section-problem">問題定義</a></li>
-        <li><a href="#section-process">執行過程</a></li>
+        <li><a href="#section-flow">任務流程</a></li>
+        <li><a href="#section-ia">資訊架構</a></li>
         <li><a href="#section-outcome">成果</a></li>
       </ul>
     </aside>
@@ -59,7 +58,7 @@
           <span class="card-tag">使用者研究</span>
         </div>
         <h1 class="project-hero-title">廣告成效數據分析 Dashboard</h1>
-        <p class="project-hero-desc">整合三方數據建構動態 Dashboard，特定平台成本降低 10%、ROAS 提升至 3–4。</p>
+        <p class="project-hero-desc">為沒有數據背景的使用者設計決策工具——整合三方數據、定義判斷邏輯，讓非專業者 30 秒內做出廣告調整決策。</p>
       </div>
 
       <!-- Meta -->
@@ -85,155 +84,292 @@
       <!-- 背景 -->
       <div class="content-section" id="section-bg">
         <h2>背景</h2>
-        <p>頂級創意行銷跨平台投放廣告，廣告目標是提高週末預約量與平假日過路客組數。但公司從未建立數據追蹤系統，所有投放決策依賴直覺。</p>
+        <p>頂級創意行銷跨平台投放廣告，目標是提高週末預約量與平假日過路客組數。公司從未建立數據追蹤系統，廣告投放、預約行為、每月費用各自存在不同系統，無法整合比對。</p>
+        <p>問題不是沒有數據——而是沒有人有能力、也沒有時間把三個來源串在一起。所有廣告決策最終都靠直覺：「感覺這個平台好一點就多投一點。」</p>
       </div>
 
       <!-- 使用者與痛點 -->
       <div class="content-section" id="section-users">
         <h2>使用者與痛點</h2>
-        <p>這個 Dashboard 有兩種使用者，需求不同，但痛點相同：</p>
+        <p>這個工具有兩種使用者，需求不同，但痛點相同：</p>
         <div class="design-cards">
           <div class="design-card">
             <div class="design-card-icon">👤</div>
             <h4>老闆（決策者）</h4>
-            <p>需要快速判斷廣告是否值得繼續投放。以前查資料耗時、往往找不到，最終只能靠感覺拍板。</p>
+            <p>需要快速判斷廣告是否值得繼續投放，但查資料耗時、往往找不到，最終只能靠感覺拍板。</p>
           </div>
           <div class="design-card">
             <div class="design-card-icon">🔄</div>
             <h4>接替人員（執行者）</h4>
-            <p>需要在沒有完整交接的情況下快速上手。每次人員輪替，知識歸零，新人要重新摸索一遍。</p>
+            <p>需要在沒有完整交接的情況下快速上手。每次人員輪替，知識歸零，新人要從頭摸索。</p>
           </div>
         </div>
         <div class="insight-pull">
-          <p class="insight-label">關鍵洞察</p>
-          <p>問題不只是「沒有數據」——就算有數據，也沒有人有時間解讀它。Dashboard 必須讓非專業者在 30 秒內做出判斷。</p>
+          <p class="insight-label">設計核心限制</p>
+          <p>小公司沒有人力即時調整廣告，也沒有數據分析師解讀數字。工具必須讓沒有廣告背景的人在 30 秒內做出判斷——而不是提供更多數據讓他們自己想。</p>
         </div>
       </div>
 
-      <!-- 問題定義 -->
-      <div class="content-section" id="section-problem">
-        <h2>問題定義</h2>
-        <p>廣告優化的核心障礙是<strong>數據斷層</strong>：</p>
-        <div class="design-cards">
-          <div class="design-card">
-            <div class="design-card-icon">📊</div>
-            <h4>數據分散三方</h4>
-            <p>廣告投放、預約行為、每月費用分屬不同系統，無法交叉比對。</p>
+      <!-- 任務流程 -->
+      <div class="content-section" id="section-flow">
+        <h2>任務流程</h2>
+        <p>兩種使用者的任務起點不同，決策目的也不同，對應兩條任務路徑：</p>
+
+        <h3>Task A：老闆 — 30 秒判斷廣告效益</h3>
+        <div class="task-flow">
+          <div class="task-step">
+            <span class="task-step-num">1</span>
+            <span class="task-step-name">開啟 Dashboard</span>
+            <span class="task-step-desc">選月份・P1 固定入口</span>
           </div>
-          <div class="design-card">
-            <div class="design-card-icon">🔍</div>
-            <h4>缺乏整合視角</h4>
-            <p>無法判斷哪個平台、哪個時段真正帶來預約轉換。</p>
+          <div class="task-step">
+            <span class="task-step-num">2</span>
+            <span class="task-step-name">掃 ROAS</span>
+            <span class="task-step-desc">≥ 1x 正常・花費是否合理</span>
           </div>
-          <div class="design-card">
-            <div class="design-card-icon">🎯</div>
-            <h4>決策缺乏依據</h4>
-            <p>優化方向不明確，廣告投放仍依賴直覺判斷。</p>
+          <div class="task-step">
+            <span class="task-step-num">3</span>
+            <span class="task-step-name">異常往下挖</span>
+            <span class="task-step-desc">P2 看平台差異・P3 看 Google 效益</span>
+          </div>
+          <div class="task-step">
+            <span class="task-step-num">4</span>
+            <span class="task-step-name">做決策</span>
+            <span class="task-step-desc">暫停調整或維持現狀</span>
           </div>
         </div>
+
+        <h3>Task B：接替人員 — 無交接快速上手</h3>
+        <div class="task-flow">
+          <div class="task-step">
+            <span class="task-step-num">1</span>
+            <span class="task-step-name">上傳 CSV</span>
+            <span class="task-step-desc">支援多檔・狀態燈全綠才開始</span>
+          </div>
+          <div class="task-step">
+            <span class="task-step-num">2</span>
+            <span class="task-step-name">P1 掃整體</span>
+            <span class="task-step-desc">建立本月基準・不需前任交接</span>
+          </div>
+          <div class="task-step">
+            <span class="task-step-num">3</span>
+            <span class="task-step-name">按問題選頁</span>
+            <span class="task-step-desc">預約量低→P5・臨時場少→P3</span>
+          </div>
+          <div class="task-step">
+            <span class="task-step-num">4</span>
+            <span class="task-step-name">下結論</span>
+            <span class="task-step-desc">每頁附判斷邏輯・不需自行解讀</span>
+          </div>
+        </div>
+
+        <div class="demo-feature">
+          <div class="demo-feature-img">
+            <button class="thumb-link" onclick="document.getElementById('lb-demo2').showModal()">
+              <img src="assets/廣告Dashboard/demo2.png" alt="資料上傳與狀態燈">
+              <span class="thumb-hint">點擊放大</span>
+            </button>
+          </div>
+          <div class="demo-feature-caption">
+            <span class="demo-feature-tag">Task B 入口</span>
+            <div class="demo-feature-body">
+              <h4>資料上傳 + 狀態燈</h4>
+              <p>接替人員無需了解 CSV 格式——狀態燈全綠才能開始分析。不依賴前任口頭說明，系統本身告訴你資料是否完整。</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- 執行過程 -->
-      <div class="content-section" id="section-process">
-        <h2>執行過程</h2>
+      <!-- 資訊架構 & 分析架構（合併節） -->
+      <div class="content-section" id="section-ia">
+        <h2>資訊架構 &amp; 分析架構</h2>
 
         <div class="insight-pull">
-          <p class="insight-label">資訊架構原則</p>
-          <p>小公司沒有人力即時調整廣告——設計邏輯是「先快速掃一眼效益，不好再往下挖」。五個面向從整體到細節遞進，使用者只在需要時才往下看。</p>
+          <p class="insight-label">IA 設計原則</p>
+          <p>先快速掃一眼效益，不好再往下挖。使用者只在需要時才進入更深的頁面，不強迫一次消化所有數字。</p>
         </div>
 
-        <div class="validation-flow">
-          <div class="validation-step">
-            <div class="validation-tag">Step 1</div>
-            <h4>指標定義</h4>
-            <p>依使用者決策流程，定義五個由淺入深的追蹤面向</p>
+        <!-- IA 樹狀圖 -->
+        <div class="ia-tree">
+
+          <div class="ia-node ia-node--l0">
+            <span class="ia-level ia-level--l0">L0</span>
+            <span class="ia-name">Dashboard 整體</span>
           </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">Step 2</div>
-            <h4>資料架構整合</h4>
-            <p>整合三方數據，建立統一結構，讓不同平台數字可以交叉比對</p>
+
+          <div class="ia-node ia-node--l1">
+            <span class="ia-level ia-level--l1">L1</span>
+            <span class="ia-name">全域控制層</span>
+            <span class="ia-desc">套用後所有頁面同步刷新</span>
           </div>
-          <div class="validation-arrow">→</div>
-          <div class="validation-step">
-            <div class="validation-tag">Step 3</div>
-            <h4>Dashboard 建構</h4>
-            <p>以 Gemini 協助撰寫公式、建議圖表類型，讓跨時間段、跨平台趨勢可視化</p>
+
+          <div class="ia-node ia-node--l1x">
+            <span class="ia-level ia-level--l1x">L1-1</span>
+            <span class="ia-name">月份篩選</span>
+            <span class="ia-desc">P1–P5 共用，全年度或指定單月</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x">
+            <span class="ia-level ia-level--l1x">L1-2</span>
+            <span class="ia-name">遊戲主題 / 廣告平台篩選</span>
+            <span class="ia-desc">P4 獨有，可交叉限縮分析範圍</span>
+          </div>
+
+          <div class="ia-node ia-node--l1" style="margin-top:8px;">
+            <span class="ia-level ia-level--l1">L1</span>
+            <span class="ia-name">頁面層（六個分析視角）</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P1</span>
+            <div class="ia-page-content">
+              <span class="ia-name">數據總覽</span>
+              <span class="ia-desc">ROAS、廣告花費、預約收入、臨時場熱點</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">整體投報率如何？</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P2</span>
+            <div class="ia-page-content">
+              <span class="ia-name">平台比較</span>
+              <span class="ia-desc">逃脫吧 ROAS、七分之二佔比、廣告期 vs 前兩月</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">哪個遊戲投哪個平台最划算？</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P3</span>
+            <div class="ia-page-content">
+              <span class="ia-name">Google 單日</span>
+              <span class="ia-desc">Daily CPA、地圖點擊 vs 臨時場、廣告領先日</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">廣告點擊到走入的轉換率？</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P4</span>
+            <div class="ia-page-content">
+              <span class="ia-name">客群熱點</span>
+              <span class="ia-desc">來源熱點、星期熱點、自然流量週規律</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">各平台帶來什麼樣的客群？</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P5</span>
+            <div class="ia-page-content">
+              <span class="ia-name">預約提前期</span>
+              <span class="ia-desc">0–3天 / 4–7天 / 8–14天 / 15天以上 分桶比例</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">多久前的廣告會影響決策？</span>
+          </div>
+
+          <div class="ia-node ia-node--l1x ia-node--page">
+            <span class="ia-level ia-level--l1x">P6</span>
+            <div class="ia-page-content">
+              <span class="ia-name">年度趨勢</span>
+              <span class="ia-desc">全年折線、年度 ROAS 長條、臨時場走勢（固定全年）</span>
+            </div>
+            <span class="ia-page-arrow">→</span>
+            <span class="ia-page-question">哪個月份、哪個平台長期最穩？</span>
+          </div>
+
+        </div>
+
+        <!-- 截圖洞察案例：P1 → P3 → P5 -->
+        <p class="image-caption" style="padding: 20px 0 4px; background: none;">以下截圖數據均為示意用途，非真實數據。</p>
+
+        <div class="demo-feature">
+          <div class="demo-feature-img">
+            <button class="thumb-link" onclick="document.getElementById('lb-demo1').showModal()">
+              <img src="assets/廣告Dashboard/demo1.png" alt="Dashboard P1 入口設計">
+              <span class="thumb-hint">點擊放大</span>
+            </button>
+          </div>
+          <div class="demo-feature-caption">
+            <span class="demo-feature-tag">P1 入口</span>
+            <div class="demo-feature-body">
+              <h4>整體 ROAS 一眼判斷，不需進入其他頁面</h4>
+              <p>ROAS、廣告花費、預約收入三個主要數字放最大。每個頁面的核心問題只有一句話，圖表顏色直接給出判斷方向——讓數字告訴使用者「這是好還是不好」，而不是讓他們自己解讀。</p>
+            </div>
           </div>
         </div>
 
-        <h3>五個追蹤面向</h3>
-        <div class="panel-list">
-          <div class="panel-item">
-            <span class="panel-label">當月成效總覽</span>
-            <span class="panel-desc">廣告費、ROAS、預約收入；熱點圖呈現各主題月別組數</span>
+        <div class="demo-feature">
+          <div class="demo-feature-img">
+            <button class="thumb-link" onclick="document.getElementById('lb-demo3').showModal()">
+              <img src="assets/廣告Dashboard/demo3.png" alt="地圖導航點擊 vs 臨時場走入折線圖">
+              <span class="thumb-hint">點擊放大</span>
+            </button>
           </div>
-          <div class="panel-item">
-            <span class="panel-label">年度趨勢</span>
-            <span class="panel-desc">月別預約組數堆疊長條圖與年度累計 ROAS</span>
-          </div>
-          <div class="panel-item">
-            <span class="panel-label">人數與來源分佈</span>
-            <span class="panel-desc">各主題多人／少人比例及各來源最佳表現標記</span>
-          </div>
-          <div class="panel-item">
-            <span class="panel-label">預約提前期</span>
-            <span class="panel-desc">7 天內 vs 7 天後訂單佔比，了解玩家決策行為</span>
-          </div>
-          <div class="panel-item">
-            <span class="panel-label">Google Ads 單日深度</span>
-            <span class="panel-desc">每組 CPA、導航點擊轉化率、廣告決策領先日分析</span>
+          <div class="demo-feature-caption">
+            <span class="demo-feature-tag">P3 洞察</span>
+            <div class="demo-feature-body">
+              <h4>反直覺發現：地圖點擊與到店臨時客沒有直接關係</h4>
+              <p>原假設地圖導航點擊越多，臨時走入越多。折線對比後走勢並不吻合——這讓團隊停止以導航點擊數作為廣告成效指標，避免持續誤判投資效益。</p>
+            </div>
           </div>
         </div>
 
-        <!-- Dashboard 截圖 -->
-        <p class="image-caption" style="padding: 16px 0 4px; background: none;">以下截圖數據均為示意用途，非真實數據。</p>
-
-        <div class="demo-explain">
-          <div class="demo-explain-text">
-            <h4>預約用戶行為分析</h4>
-            <p>分析各遊戲主題的人數組合分佈（多人／少人），並對照玩家通常在 7 天內或 7 天後預約的比例。由於系統開放兩個月內的場次預約，掌握各主題的提前期行為，有助於精準規劃各遊戲的廣告投放時機與預算配置。</p>
+        <div class="demo-feature">
+          <div class="demo-feature-img">
+            <button class="thumb-link" onclick="document.getElementById('lb-demo4').showModal()">
+              <img src="assets/廣告Dashboard/demo4.png" alt="年度主題預約趨勢折線圖">
+              <span class="thumb-hint">點擊放大</span>
+            </button>
           </div>
-          <div class="demo-explain-img">
-            <img src="assets/廣告Dashboard/gemini-demo2.png" alt="預約用戶行為分析">
-          </div>
-        </div>
-
-        <div class="demo-explain">
-          <div class="demo-explain-text">
-            <h4>Google Ads 導航點擊分析</h4>
-            <p>原假設點擊地圖導航的人會轉化為臨時客，但分析後發現兩者無直接關係。透過折線對比讓這個落差清楚可見，避免誤判廣告效果。右上角可切換月份或全年度，讓不同時段的比對更有彈性。</p>
-          </div>
-          <div class="demo-explain-img">
-            <img src="assets/廣告Dashboard/gemini-demo3.jpeg" alt="Google Ads 導航點擊分析">
+          <div class="demo-feature-caption">
+            <span class="demo-feature-tag">P5 行為分析</span>
+            <div class="demo-feature-body">
+              <h4>各遊戲主題旺季週期不同，廣告排程不能一刀切</h4>
+              <p>各主題全年預約量折線讓旺淡季規律可視化。不同主題的高峰月份錯開，這份資料直接成為各主題廣告投放時機的排程依據。</p>
+            </div>
           </div>
         </div>
 
-        <div class="demo-explain">
-          <div class="demo-explain-text">
-            <h4>資料上傳檢查區</h4>
-            <p>讓使用者在進行分析前確認資料是否有誤。綠色代表該區段正常，紅色代表有問題。接替人員無需專業背景，也能自行排查上傳的 CSV 資料，降低交接成本。</p>
-          </div>
-          <div class="demo-explain-img">
-            <img src="assets/廣告Dashboard/資料上傳檢查區.png" alt="資料上傳檢查區">
-          </div>
-        </div>
       </div>
 
       <!-- 成果 -->
       <div id="section-outcome">
         <div class="outcomes">
           <h3>成果（2026 Q1 驗證）</h3>
-          <ul class="outcome-list">
-            <li>
-              <span class="outcome-num">-10%</span>
-              <span>Google 廣告成本降低</span>
-            </li>
-            <li>
-              <span class="outcome-num">3–4</span>
-              <span>ROAS 提升至</span>
-            </li>
-          </ul>
+
+          <div class="outcome-pairs" style="margin-top: 16px;">
+            <div class="outcome-pair-header">
+              <span class="outcome-col-label">導入前</span>
+              <span></span>
+              <span class="outcome-col-label after">導入後</span>
+            </div>
+            <div class="outcome-pair">
+              <span class="outcome-before">廣告決策靠直覺，無量化基準，無從比較各通路表現</span>
+              <span class="outcome-arrow">→</span>
+              <span class="outcome-after">P1 一眼看到所有通路 <strong>ROAS 3–4x</strong>，行銷決策有數字依據</span>
+            </div>
+            <div class="outcome-pair">
+              <span class="outcome-before">誤以地圖點擊數代表臨時客到店，廣告預算分配錯誤</span>
+              <span class="outcome-arrow">→</span>
+              <span class="outcome-after">P3 揭示兩者<strong>無直接關聯</strong>，2026 Q1 減少地圖點擊廣告投入，Google 成本 <strong>-10%</strong></span>
+            </div>
+            <div class="outcome-pair">
+              <span class="outcome-before">三方數據孤立，無法看到廣告對臨時客與預約客的影響</span>
+              <span class="outcome-arrow">→</span>
+              <span class="outcome-after">整合後可交叉比對 Google 廣告、臨時客、預約客三條數據曲線</span>
+            </div>
+            <div class="outcome-pair">
+              <span class="outcome-before">人員輪替後知識歸零，需重新摸索</span>
+              <span class="outcome-arrow">→</span>
+              <span class="outcome-after"><strong>30 秒</strong>老闆可獨立判斷，接替人員無需口頭交接</span>
+            </div>
+          </div>
+
+
         </div>
       </div>
 
@@ -246,12 +382,11 @@
     <div class="toc-mobile-list">
       <a href="#section-bg">背景</a>
       <a href="#section-users">使用者與痛點</a>
-      <a href="#section-problem">問題定義</a>
-      <a href="#section-process">執行過程</a>
+      <a href="#section-flow">任務流程</a>
+      <a href="#section-ia">資訊架構</a>
       <a href="#section-outcome">成果</a>
     </div>
   </details>
-
 
   <!-- 專案導覽 -->
   <div class="project-nav">
@@ -270,5 +405,18 @@
 </footer>
 
 <script src="main.js"></script>
+
+<dialog id="lb-demo1" class="lightbox" onclick="this.close()">
+  <img src="assets/廣告Dashboard/demo1.png" alt="Dashboard P1 數據總覽">
+</dialog>
+<dialog id="lb-demo2" class="lightbox" onclick="this.close()">
+  <img src="assets/廣告Dashboard/demo2.png" alt="資料上傳與狀態燈">
+</dialog>
+<dialog id="lb-demo3" class="lightbox" onclick="this.close()">
+  <img src="assets/廣告Dashboard/demo3.png" alt="地圖導航點擊 vs 臨時場走入折線圖">
+</dialog>
+<dialog id="lb-demo4" class="lightbox" onclick="this.close()">
+  <img src="assets/廣告Dashboard/demo4.png" alt="年度主題預約趨勢折線圖">
+</dialog>
 </body>
 </html>
