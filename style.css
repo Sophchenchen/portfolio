@@ -175,7 +175,7 @@ nav .container {
   gap: 28px;
 }
 
-.project-card:nth-child(5) {
+.project-card:nth-child(7) {
   grid-column: 1 / -1;
   max-width: calc(50% - 14px);
   justify-self: center;
@@ -1217,10 +1217,12 @@ dialog.lightbox img {
   align-items: stretch;
   gap: 8px;
   margin: 20px 0 8px;
+  overflow-x: auto;
 }
 
 .validation-step {
   flex: 1;
+  min-width: 120px;
   background: var(--bg-card);
   border: 1px solid var(--rule);
   border-radius: 10px;
@@ -1475,7 +1477,7 @@ dialog.lightbox img {
 @media (max-width: 640px) {
   .hero h1 { font-size: 32px; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-card:nth-child(5) { grid-column: auto; max-width: none; justify-self: auto; }
+  .project-card:nth-child(7) { grid-column: auto; max-width: none; justify-self: auto; }
   .about .container { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
   .footer-contact { flex-direction: column; gap: 4px; }

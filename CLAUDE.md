@@ -171,6 +171,7 @@ TOC 點擊後對應 `h2` 左側 bar 加粗（`:target` selector）。
 - **新增 case study section**：複製 `<div class="content-section" id="section-xxx">` 結構，在 `.toc ul` 新增對應 `<li>`
 - **首頁卡片 overlay 文字**：修改各 `.card-overlay ul` 內的 `<li>` 即可
 - **不使用任何 JS 框架或打包工具**
+- **文案用語**：一律使用台灣慣用詞彙，避免中國用語（例：「渠道」→「管道」/「通路」，「視頻」→「影片」，「鏈接」→「連結」）
 
 ---
 
